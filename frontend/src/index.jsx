@@ -1,4 +1,4 @@
-// Step 5 work by Poorvi
+// Step 1 work by Poorvi
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App'
