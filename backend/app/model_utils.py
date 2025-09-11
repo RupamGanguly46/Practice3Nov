@@ -1,8 +1,11 @@
-# Step 1 work by Mishi
-# Minimal model utils placeholder
+# Step 2 work by Mishi
+# model_utils with scratch predict returning classes
 import os
 
 BASE_DIR = os.path.join(os.path.dirname(__file__), '..')
 
 def predict_scratch(text: str):
-    return {'model': 'scratch', 'label': 'neutral', 'score': 0.5}
+    # naive heuristic
+    if 'not' in text or 'hate' in text:
+        return {'model': 'scratch', 'label': 'negative', 'score': 0.9}
+    return {'model': 'scratch', 'label': 'positive', 'score': 0.9}
