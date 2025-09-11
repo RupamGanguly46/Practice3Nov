@@ -1,2 +1,7 @@
-# Step 1 work by Mishi
+# Step 2 work by Mishi
 fastapi
+uvicorn
+pydantic
+joblib
+scikit-learn
+pandas
