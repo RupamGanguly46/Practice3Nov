@@ -1,4 +1,4 @@
-# Step 2 work by Rupam
+# Step 3 work by Rupam
 text,label
 "I loved this movie, it was fantastic and exciting",positive
 "This was a terrible film, I hated it",negative
@@ -10,5 +10,5 @@ text,label
 "Awful plot, bad acting",negative
 "A beautiful film with stunning visuals",positive
 "Waste of time, do not recommend",negative
-# Step 2 work by Rupam: added a small fix to sample text
 "An added sample to slightly expand training",positive
+# Step 3: corrected typo in one sample
