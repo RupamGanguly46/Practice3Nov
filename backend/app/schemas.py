@@ -1,4 +1,4 @@
-# Step 6 work by Mishi
+# Step 4 work by Mishi
 from pydantic import BaseModel
 
 class TextIn(BaseModel):
@@ -8,4 +8,3 @@ class PredictOut(BaseModel):
     model: str
     label: str
     score: float
-# Step 6: finalized by Mishi
