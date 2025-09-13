@@ -1,4 +1,4 @@
-# Step 3 work by Rupam
+# Step 4 work by Rupam
 text,label
 "I loved this movie, it was fantastic and exciting",positive
 "This was a terrible film, I hated it",negative
@@ -11,4 +11,5 @@ text,label
 "A beautiful film with stunning visuals",positive
 "Waste of time, do not recommend",negative
 "An added sample to slightly expand training",positive
-# Step 3: corrected typo in one sample
+"A tiny extra sample for step4",negative
+# Step 4 work by Rupam (dataset expanded)
