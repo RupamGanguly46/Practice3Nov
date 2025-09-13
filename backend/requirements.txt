@@ -1,8 +1,9 @@
-# Step 3 work by Mishi
+# Step 4 work by Mishi
 fastapi
 uvicorn[standard]
-pydantic
 joblib
 scikit-learn
 pandas
 transformers
+torch
+pydantic
