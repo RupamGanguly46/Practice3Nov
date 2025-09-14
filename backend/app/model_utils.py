@@ -1,5 +1,5 @@
-# Step 4 work by Mishi
-# Add huggingface pipeline integration (simulated import)
+# Step 5 work by Mishi
+# Slight refactor and caching of loaded models
 import os
 import joblib
 from transformers import pipeline
@@ -18,10 +18,17 @@ def load_scratch_model():
         _scr_model = joblib.load(MODEL_PATH)
     return _scr_model
 
+
 def predict_scratch(text: str):
     model = load_scratch_model()
-    pred = model.predict([text])[0]
-    return {'model': 'scratch', 'label': pred, 'score': 0.9}
+    pred = model.predict_proba([text])[0]
+    labels = model.classes_
+    best_idx = pred.argmax()
+    return {
+        'model': 'scratch',
+        'label': labels[best_idx],
+        'score': float(pred[best_idx])
+    }
 
 
 def load_hf_pipeline():
@@ -34,4 +41,8 @@ def load_hf_pipeline():
 def predict_hf(text: str):
     pipe = load_hf_pipeline()
     res = pipe(text)[0]
-    return {'model': 'huggingface', 'label': res['label'].lower(), 'score': float(res['score'])}
+    return {
+        'model': 'huggingface',
+        'label': res['label'].lower(),
+        'score': float(res['score'])
+    }
