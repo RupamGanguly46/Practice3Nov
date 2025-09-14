@@ -1,4 +1,4 @@
-# Step 4 work by Mishi
+# Step 5 work by Mishi
 fastapi
 uvicorn[standard]
 joblib
@@ -6,4 +6,6 @@ scikit-learn
 pandas
 transformers
 torch
+python-multipart
 pydantic
+requests
