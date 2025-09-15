@@ -1,5 +1,5 @@
-# Step 5 work by Rupam
-# Minor refactor: extracted build_pipeline function
+# Step 6 work by Rupam
+# Added basic unit-test helper function (not full tests, small helper)
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
@@ -19,7 +19,7 @@ def build_pipeline(ngram=(1,2), max_features=4500, random_state=42):
     ])
 
 def train_and_save(random_state=42, ngram=(1,2)):
-    print("[Rupam step5] Building pipeline and training")
+    print("[Rupam step6] Training and running quick smoke predict")
     df = pd.read_csv(DATA_PATH)
     X = df['text'].astype(str)
     y = df['label'].astype(str)
@@ -30,5 +30,12 @@ def train_and_save(random_state=42, ngram=(1,2)):
     print(f"Saved scratch model to {MODEL_PATH}")
     return MODEL_PATH
 
+
+def quick_smoke():
+    """Run a quick predict to ensure model can run on a sample."""
+    model = joblib.load(MODEL_PATH)
+    print('[Rupam step6] Quick smoke labels:', model.predict(["I loved this movie"]))
+
 if __name__ == '__main__':
     train_and_save()
+    # quick_smoke()  # uncomment to run smoke locally
