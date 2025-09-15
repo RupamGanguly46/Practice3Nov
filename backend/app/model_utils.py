@@ -1,5 +1,5 @@
-# Step 5 work by Mishi
-# Slight refactor and caching of loaded models
+# Step 6 work by Mishi
+# Finalized model_utils (production-ready snapshot)
 import os
 import joblib
 from transformers import pipeline
@@ -17,7 +17,6 @@ def load_scratch_model():
             raise FileNotFoundError(f"Scratch model not found at {MODEL_PATH}. Train it first.")
         _scr_model = joblib.load(MODEL_PATH)
     return _scr_model
-
 
 def predict_scratch(text: str):
     model = load_scratch_model()
@@ -46,3 +45,4 @@ def predict_hf(text: str):
         'label': res['label'].lower(),
         'score': float(res['score'])
     }
+# Step 6: finalized by Mishi
