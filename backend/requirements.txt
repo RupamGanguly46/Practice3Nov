@@ -1,4 +1,4 @@
-# Step 5 work by Mishi
+# Step 6 work by Mishi (finalized)
 fastapi
 uvicorn[standard]
 joblib
