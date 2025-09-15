@@ -1,12 +1,12 @@
-# Step 5 work by Mishi
-# Improve error handling and make predict endpoints return PredictOut model (simulated)
+# Step 6 work by Mishi
+# Finalized main.py for Mishi: same as production snapshot with small comment
 from fastapi import FastAPI, HTTPException
 from app.schemas import TextIn, PredictOut
 from app import model_utils
 import os
 import subprocess
 
-app = FastAPI(title='Text Classifier API - step5')
+app = FastAPI(title='Text Classifier API')
 
 @app.post('/train')
 async def train():
@@ -38,4 +38,5 @@ async def predict_hf(payload: TextIn):
 
 @app.get('/')
 async def root():
-    return {'status': 'ok', 'message': 'Text Classifier API (step5)'}
+    return {'status': 'ok', 'message': 'Text Classifier API'}
+# Step 6: finalized by Mishi
