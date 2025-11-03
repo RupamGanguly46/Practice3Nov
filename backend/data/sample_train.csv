@@ -1,0 +1,15 @@
+# Step 8 work by Rupam
+text,label
+"I loved this movie, it was fantastic and exciting",positive
+"This was a terrible film, I hated it",negative
+"An excellent performance and a wonderful story",positive
+"Not my cup of tea; it was boring and too long",negative
+"Brilliant! A must watch",positive
+"I did not enjoy this movie at all",negative
+"A heartwarming and compelling tale",positive
+"Awful plot, bad acting",negative
+"A beautiful film with stunning visuals",positive
+"Waste of time, do not recommend",negative
+"An added sample to slightly expand training",positive
+"A tiny extra sample for step4",negative
+# Step 8: final snapshot for Rupam

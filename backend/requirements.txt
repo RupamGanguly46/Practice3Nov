@@ -1,0 +1,11 @@
+# Step 6 work by Mishi (finalized)
+fastapi
+uvicorn[standard]
+joblib
+scikit-learn
+pandas
+transformers
+torch
+python-multipart
+pydantic
+requests
